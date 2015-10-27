@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class Send : MonoBehaviour {
-
-
+public class Cube1 : MonoBehaviour {
+	
+	
 	public static int cube1=0;
 	// Use this for initialization
 	void Start () {
@@ -14,14 +14,12 @@ public class Send : MonoBehaviour {
 		
 	}
 	public int OnBecameInvisible(){
-		print ("lost" + this);
-		cube1--;
-		return cube1;
+		//print ("lost" + this);
+		return cube1 = 0;
 	}
 	
 	public int OnBecameVisible(){
-		print ("found" + this);
-		cube1++;
-		return cube1;
+		//print ("found" + this);
+		return cube1 = 1;
 	}
 }
