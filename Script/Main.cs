@@ -5,14 +5,26 @@ using Vuforia;
 public class Main : MonoBehaviour {
 	public Cube1 cube1;
 	public Cube2 cube2;
-	GameObject kaiten;
+	public Unity1 unity1;
+	public Unity2 unity2;
+	public GUIStyleState styleState;
+	private GUIStyle style;
+	GameObject kaiten1;
 	GameObject kaiten2;
+	GameObject kaiten3;
+	GameObject kaiten4;
+	public static int cube=0;
+
 	void Start() {
 		//Ssend = GetComponent<Script1>();
 		//print ("Trac");
 		//someScript = Send.GetComponent<SomeScript> ();
-		kaiten = GameObject.Find ("Cube1");
+		kaiten1 = GameObject.Find ("Cube1");
 		kaiten2 = GameObject.Find ("Cube2");
+		kaiten3 = GameObject.Find ("Unity1");
+		kaiten4 = GameObject.Find ("Unity2");
+		style = new GUIStyle();
+		style.fontSize = 30;
 	}
 	void Update() {
 		//Destroy(Cube1, 2.0f);
@@ -27,16 +39,33 @@ public class Main : MonoBehaviour {
 		//print(Cube2.cube2);
 		if (Cube1.cube1 == 1 && Cube2.cube2 == 1) {
 			print ("Cubeが二個でてます");
-			kaiten.transform.Rotate(2,3,2);
+			cube = 1;
+			kaiten1.transform.Rotate(2,3,2);
 			kaiten2.transform.Rotate(2,3,2);
 		} else {
 			print ("でてないです");
+			cube = 0;
 		}
 
-
-
+		if (Unity1.unity1 == 1 && Unity2.unity2 == 1) {
+			print ("unityが二個でてます");
+			kaiten3.transform.Rotate(2,3,2);
+			kaiten4.transform.Rotate(2,3,2);
+		} else {
+			print ("でてないです");
+		}
+		//print (./Vuforia/Scripts/DefaultTrackableEventHandler.OnTrackingFound())
 	}
-	
+
+	void OnGUI()
+	{
+		if (cube == 1) {
+			Rect rect = new Rect(10, 10, 400, 300);
+			style.normal = styleState;
+			GUI.Label(rect, "Cube揃ってるんですよ～", style);
+		}
+	}
+
 	//public void OnBecameVisible(){
 	//	print (Cube1);
 	//}
