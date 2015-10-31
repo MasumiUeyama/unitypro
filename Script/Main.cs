@@ -21,7 +21,7 @@ public class Main : MonoBehaviour {
 	public Obj16 Obj16;
 	public Obj17 Obj17;
 	public Obj18 Obj18;
-	public Obj19 Obj10;
+	public Obj19 Obj19;
 	public Obj20 Obj20;
 	private GUIStyle m_guiStyle;
 	private GUIStyleState m_styleState;
@@ -68,7 +68,7 @@ public class Main : MonoBehaviour {
 	public static int SoundFlg=0;
 	public AudioClip audioClip;
 	AudioSource audioSource;
-
+	
 	void Start() {
 		//Ssend = GetComponent<Script1>();
 		//print ("Trac");
@@ -125,7 +125,7 @@ public class Main : MonoBehaviour {
 			flg04 = 1;
 		} else if(Obj09.obj09 == 1 && Obj10.obj10 == 1) {
 			flg05 = 1;
-		} else if(Obj11.obj11 == 1 && Obj11.obj12 == 1) {
+		} else if(Obj11.obj11 == 1 && Obj12.obj12 == 1) {
 			flg06 = 1;
 		} else if(Obj14.obj14 == 1 && Obj13.obj13 == 1) {
 			flg07 = 1;
@@ -136,8 +136,8 @@ public class Main : MonoBehaviour {
 		} else if(Obj19.obj19 == 1 && Obj20.obj20 == 1) {
 			flg10 = 1;
 		}
-			
-			
+		
+		
 		if(flg01==1){
 			kaiten01.transform.Rotate(2,3,2);
 			kaiten02.transform.Rotate(2,3,2);
@@ -147,7 +147,7 @@ public class Main : MonoBehaviour {
 			kaiten03.transform.Rotate(2,3,2);
 			kaiten04.transform.Rotate(2,3,2);
 			Sound();
-
+			
 		} else if(flg03==1){
 			kaiten05.transform.Rotate(2,3,2);
 			kaiten06.transform.Rotate(2,3,2);
@@ -157,12 +157,12 @@ public class Main : MonoBehaviour {
 			kaiten07.transform.Rotate(2,3,2);
 			kaiten08.transform.Rotate(2,3,2);
 			Sound();
-
+			
 		} else if(flg05==1){
 			kaiten09.transform.Rotate(2,3,2);
 			kaiten10.transform.Rotate(2,3,2);
 			Sound();
-
+			
 		} else if(flg06==1){
 			kaiten11.transform.Rotate(2,3,2);
 			kaiten12.transform.Rotate(2,3,2);
@@ -188,24 +188,24 @@ public class Main : MonoBehaviour {
 		} else {
 			SoundFlg = 0;
 		}
-
-}
-
-	void OnGUI(){
+		
+	}
 	
-		if(flg01 ==1 || flg02 == 1 || flg03 == 1
-		   flg04 ==1 || flg05 == 1 || flg06 == 1
-		   flg07 ==1 || flg08 == 1 || flg09 == 1 flg10 ==1){
+	void OnGUI(){
+		
+		if(flg01 ==1 || flg02 == 1 || flg03 == 1 ||
+		   flg04 ==1 || flg05 == 1 || flg06 == 1 ||
+		   flg07 ==1 || flg08 == 1 || flg09 == 1 || flg10 ==1){
 			GUI.Label (new Rect (90, 40, 80, 20), "正　 解", m_guiStyle);
 		} else {
 			GUI.Label(new Rect(90, 40, 80, 20), "し　 ね", m_guiStyle);
 		}
 	}
-
-	void Suond(){
+	
+	void Sound(){
 		if (SoundFlg == 0) {
-		audioSource.PlayOneShot (audioClip, 0.7F);
-		SoundFlg = 1;
+			audioSource.PlayOneShot (audioClip, 0.7F);
+			SoundFlg = 1;
 		}
 	}
 	//public void OnBecameVisible(){
