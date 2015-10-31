@@ -3,28 +3,69 @@ using System.Collections;
 using Vuforia;
 
 public class Main : MonoBehaviour {
-	public Cube1 cube1;
-	public Cube2 cube2;
-	public Ball1 ball1;
-	public Ball2 ball2;
-	public Ball1 ball3;
-	public Ball2 ball4;
-	public Unity1 unity1;
-	public Unity2 unity2;
+	public Obj01 Obj01;
+	public Obj02 Obj02;
+	public Obj03 Obj03;
+	public Obj04 Obj04;
+	public Obj05 Obj05;
+	public Obj06 Obj06;
+	public Obj07 Obj07;
+	public Obj08 Obj08;
+	public Obj09 Obj09;
+	public Obj10 Obj10;
+	public Obj01 Obj11;
+	public Obj02 Obj12;
+	public Obj03 Obj13;
+	public Obj04 Obj14;
+	public Obj05 Obj15;
+	public Obj06 Obj16;
+	public Obj07 Obj17;
+	public Obj08 Obj18;
+	public Obj09 Obj10;
+	public Obj10 Obj20;
 	private GUIStyle m_guiStyle;
 	private GUIStyleState m_styleState;
-	GameObject kaiten1;
-	GameObject kaiten2;
-	GameObject kaiten3;
-	GameObject kaiten4;
-	GameObject kaiten5;
-	GameObject kaiten6;
-	public static int cube=0;
-	public static int fball1=0;
-	public static int fball2=0;
-	public static int flg1=0;
-	public static int flg2=0;
-	public static int flg3=0;
+	GameObject kaiten01;
+	GameObject kaiten02;
+	GameObject kaiten03;
+	GameObject kaiten04;
+	GameObject kaiten05;
+	GameObject kaiten06;
+	GameObject kaiten07;
+	GameObject kaiten08;
+	GameObject kaiten09;
+	GameObject kaiten10;
+	GameObject kaiten11;
+	GameObject kaiten12;
+	GameObject kaiten13;
+	GameObject kaiten14;
+	GameObject kaiten15;
+	GameObject kaiten16;
+	GameObject kaiten17;
+	GameObject kaiten18;
+	GameObject kaiten19;
+	GameObject kaiten20;
+	public static int flg01=0;
+	public static int flg02=0;
+	public static int flg03=0;
+	public static int flg04=0;
+	public static int flg05=0;
+	public static int flg06=0;
+	public static int flg07=0;
+	public static int flg08=0;
+	public static int flg09=0;
+	public static int flg10=0;
+	public static int flg11=0;
+	public static int flg12=0;
+	public static int flg13=0;
+	public static int flg14=0;
+	public static int flg15=0;
+	public static int flg16=0;
+	public static int flg17=0;
+	public static int flg18=0;
+	public static int flg19=0;
+	public static int flg20=0;
+	public static int SoundFlg=0;
 	public AudioClip audioClip;
 	AudioSource audioSource;
 
@@ -32,12 +73,26 @@ public class Main : MonoBehaviour {
 		//Ssend = GetComponent<Script1>();
 		//print ("Trac");
 		//someScript = Send.GetComponent<SomeScript> ();
-		kaiten1 = GameObject.Find ("Cube1");
-		kaiten2 = GameObject.Find ("Cube2");
-		kaiten3 = GameObject.Find ("Ball1");
-		kaiten4 = GameObject.Find ("Ball2");
-		kaiten5 = GameObject.Find ("Ball3");
-		kaiten6 = GameObject.Find ("Ball4");
+		kaiten01 = GameObject.Find ("Obj01");
+		kaiten02 = GameObject.Find ("Obj02");
+		kaiten03 = GameObject.Find ("Obj03");
+		kaiten04 = GameObject.Find ("Obj04");
+		kaiten05 = GameObject.Find ("Obj05");
+		kaiten06 = GameObject.Find ("Obj06");
+		kaiten07 = GameObject.Find ("Obj07");
+		kaiten08 = GameObject.Find ("Obj08");
+		kaiten09 = GameObject.Find ("Obj09");
+		kaiten10 = GameObject.Find ("Obj10");
+		kaiten11 = GameObject.Find ("Obj11");
+		kaiten12 = GameObject.Find ("Obj12");
+		kaiten13 = GameObject.Find ("Obj13");
+		kaiten14 = GameObject.Find ("Obj14");
+		kaiten15 = GameObject.Find ("Obj15");
+		kaiten16 = GameObject.Find ("Obj16");
+		kaiten17 = GameObject.Find ("Obj17");
+		kaiten18 = GameObject.Find ("Obj18");
+		kaiten19 = GameObject.Find ("Obj19");
+		kaiten20 = GameObject.Find ("Obj20");
 		m_guiStyle = new GUIStyle();
 		m_guiStyle.fontSize = 999;
 		
@@ -58,70 +113,107 @@ public class Main : MonoBehaviour {
 		//Cube2.Rotate(45, 90, 180);
 		//print(Cube1.cube1);
 		//print(Cube2.cube2);
-		if (Cube1.cube1 == 1 && Cube2.cube2 == 1) {
-			print ("Cubeが二個でてます");
-			cube = 1;
-			kaiten1.transform.Rotate(2,3,2);
-			kaiten2.transform.Rotate(2,3,2);
-			Suond();
-		} else {
-			print ("でてないです");
-			cube = 0;
-			flg1=0;
+		
+		
+		if (Obj01.obj01 == 1 && Obj02.obj02 == 1) {
+			flg01 = 1;
+		} else if(Obj03.obj03 == 1 && Obj04.obj04 == 1) {
+			flg02 = 1;
+		} else if(Obj05.obj05 == 1 && Obj06.obj06 == 1) {
+			flg03 = 1;
+		} else if(Obj07.obj07 == 1 && Obj08.obj08 == 1) {
+			flg04 = 1;
+		} else if(Obj09.obj09 == 1 && Obj10.obj10 == 1) {
+			flg05 = 1;
+		} else if(Obj11.obj11 == 1 && Obj11.obj12 == 1) {
+			flg06 = 1;
+		} else if(Obj14.obj14 == 1 && Obj13.obj13 == 1) {
+			flg07 = 1;
+		} else if(Obj15.obj15 == 1 && Obj16.obj16 == 1) {
+			flg08 = 1;
+		} else if(Obj17.obj17 == 1 && Obj18.obj18 == 1) {
+			flg09 = 1;
+		} else if(Obj19.obj19 == 1 && Obj20.obj20 == 1) {
+			flg10 = 1;
 		}
-	
-
-
-		if (Ball1.ball1 == 1 && Ball2.ball2 == 1) {
-			print ("Ballが二個でてます");
-			fball1 = 1;
-			kaiten3.transform.Rotate(2,3,2);
-			kaiten4.transform.Rotate(2,3,2);
-			if (flg2 == 0) {
-				audioSource.PlayOneShot (audioClip, 0.7F);
-				flg2 = 1;
+			
+			
+		if(flg01==1){
+			kaiten01.transform.Rotate(2,3,2);
+			kaiten02.transform.Rotate(2,3,2);
+			Sound();
+		}
+		else if(flg02==1)
+			kaiten03.transform.Rotate(2,3,2);
+			kaiten04.transform.Rotate(2,3,2);
+			Sound();
 			}
-		} else {
-			print ("たまでてないです");
-			fball1 = 0;
-			flg2=0;
 		}
-
-		if (Ball3.ball3 == 1 && Ball4.ball4 == 1) {
-			print ("Ball2が二個でてます");
-			fball2 = 1;
-			kaiten5.transform.Rotate(2,3,2);
-			kaiten6.transform.Rotate(2,3,2);
-			if (flg3 == 0) {
-				audioSource.PlayOneShot (audioClip, 0.7F);
-				flg3 = 1;
+		else if(flg03==1){
+			kaiten05.transform.Rotate(2,3,2);
+			kaiten06.transform.Rotate(2,3,2);
+			Sound();
 			}
-		} else {
-			print ("たまでてないです");
-			fball2 = 0;
-			flg3=0;
 		}
+		else if(flg04==1)
+			kaiten07.transform.Rotate(2,3,2);
+			kaiten08.transform.Rotate(2,3,2);
+			Sound();
+			}
+		}
+		else if(flg05==1)
+			kaiten09.transform.Rotate(2,3,2);
+			kaiten10.transform.Rotate(2,3,2);
+			Sound();
 
+		}
+		else if(flg06==1)
+			kaiten11.transform.Rotate(2,3,2);
+			kaiten12.transform.Rotate(2,3,2);
+			Sound();
+		}
+		else if(flg07==1)
+			kaiten13.transform.Rotate(2,3,2);
+			kaiten14.transform.Rotate(2,3,2);
+			Sound();
+		}
+		else if(flg08==1)
+			kaiten15.transform.Rotate(2,3,2);
+			kaiten16.transform.Rotate(2,3,2);
+			Sound();
+		}		
+		else if(flg09==1)
+			kaiten17.transform.Rotate(2,3,2);
+			kaiten18.transform.Rotate(2,3,2);
+			Sound();
+		}	
+		else if(flg10==1)
+			kaiten19.transform.Rotate(2,3,2);
+			kaiten20.transform.Rotate(2,3,2);
+			Sound();
+		} else {
+			SoundFlg = 0;
+		}
 
 }
 
 	void OnGUI(){
-		if (Cube1.cube1 == 1 && Cube2.cube2 == 1) {
-			GUI.Label (new Rect (90, 40, 80, 20), "正　 解", m_guiStyle);
-		} else if(Ball1.ball1 == 1 && Ball2.ball2 == 1) {
+	
+		if(flg01 ==1 || flg02 == 1 || flg03 == 1
+		   flg04 ==1 || flg05 == 1 || flg06 == 1
+		   flg07 ==1 || flg08 == 1 || flg09 == 1 flg10 ==1){
 			GUI.Label (new Rect (90, 40, 80, 20), "正　 解", m_guiStyle);
 		} else {
 			GUI.Label(new Rect(90, 40, 80, 20), "し　 ね", m_guiStyle);
 		}
 	}
-	
+
 	void Suond(){
-		if (flg1 == 0) {
+		if (SoundFlg == 0) {
 		audioSource.PlayOneShot (audioClip, 0.7F);
-		flg1 = 1;
+		SoundFlg = 1;
 		}
 	}
-
 	//public void OnBecameVisible(){
 	//	print (Cube1);
 	//}
