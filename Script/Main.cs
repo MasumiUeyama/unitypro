@@ -143,7 +143,7 @@ public class Main : MonoBehaviour {
 			kaiten02.transform.Rotate(2,3,2);
 			Sound();
 			
-		} else if(flg02==1)
+		} else if(flg02==1){
 			kaiten03.transform.Rotate(2,3,2);
 			kaiten04.transform.Rotate(2,3,2);
 			Sound();
