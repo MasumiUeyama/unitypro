@@ -1,25 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class Ball1 : MonoBehaviour {
+public class Obj01 : MonoBehaviour {
 	
-	
-	public static int ball1=0;
-	// Use this for initialization
+	public static int obj01=0;
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
 	void Update () {
 		
 	}
 	public int OnBecameInvisible(){
-		//print ("lost" + this);
-		return ball1 = 0;
+		return obj01 = 0;
 	}
 	
 	public int OnBecameVisible(){
-		//print ("found" + this);
-		return ball1 = 1;
+		return obj01 = 1;
 	}
 }
