@@ -13,16 +13,16 @@ public class Main : MonoBehaviour {
 	public Obj08 Obj08;
 	public Obj09 Obj09;
 	public Obj10 Obj10;
-	public Obj01 Obj11;
-	public Obj02 Obj12;
-	public Obj03 Obj13;
-	public Obj04 Obj14;
-	public Obj05 Obj15;
-	public Obj06 Obj16;
-	public Obj07 Obj17;
-	public Obj08 Obj18;
-	public Obj09 Obj10;
-	public Obj10 Obj20;
+	public Obj11 Obj11;
+	public Obj12 Obj12;
+	public Obj13 Obj13;
+	public Obj14 Obj14;
+	public Obj15 Obj15;
+	public Obj16 Obj16;
+	public Obj17 Obj17;
+	public Obj18 Obj18;
+	public Obj19 Obj10;
+	public Obj20 Obj20;
 	private GUIStyle m_guiStyle;
 	private GUIStyleState m_styleState;
 	GameObject kaiten01;
@@ -142,52 +142,46 @@ public class Main : MonoBehaviour {
 			kaiten01.transform.Rotate(2,3,2);
 			kaiten02.transform.Rotate(2,3,2);
 			Sound();
-		}
-		else if(flg02==1)
+			
+		} else if(flg02==1)
 			kaiten03.transform.Rotate(2,3,2);
 			kaiten04.transform.Rotate(2,3,2);
 			Sound();
-			}
-		}
-		else if(flg03==1){
+
+		} else if(flg03==1){
 			kaiten05.transform.Rotate(2,3,2);
 			kaiten06.transform.Rotate(2,3,2);
 			Sound();
-			}
-		}
-		else if(flg04==1)
+			
+		} else if(flg04==1){
 			kaiten07.transform.Rotate(2,3,2);
 			kaiten08.transform.Rotate(2,3,2);
 			Sound();
-			}
-		}
-		else if(flg05==1)
+
+		} else if(flg05==1){
 			kaiten09.transform.Rotate(2,3,2);
 			kaiten10.transform.Rotate(2,3,2);
 			Sound();
 
-		}
-		else if(flg06==1)
+		} else if(flg06==1){
 			kaiten11.transform.Rotate(2,3,2);
 			kaiten12.transform.Rotate(2,3,2);
 			Sound();
-		}
-		else if(flg07==1)
+			
+		} else if(flg07==1){
 			kaiten13.transform.Rotate(2,3,2);
 			kaiten14.transform.Rotate(2,3,2);
 			Sound();
-		}
-		else if(flg08==1)
+			
+		} else if(flg08==1){
 			kaiten15.transform.Rotate(2,3,2);
 			kaiten16.transform.Rotate(2,3,2);
 			Sound();
-		}		
-		else if(flg09==1)
+		} else if(flg09==1){
 			kaiten17.transform.Rotate(2,3,2);
 			kaiten18.transform.Rotate(2,3,2);
 			Sound();
-		}	
-		else if(flg10==1)
+		} else if(flg10==1){
 			kaiten19.transform.Rotate(2,3,2);
 			kaiten20.transform.Rotate(2,3,2);
 			Sound();
