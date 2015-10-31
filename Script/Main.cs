@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Vuforia;
 
@@ -63,10 +63,7 @@ public class Main : MonoBehaviour {
 			cube = 1;
 			kaiten1.transform.Rotate(2,3,2);
 			kaiten2.transform.Rotate(2,3,2);
-			if (flg1 == 0) {
-				audioSource.PlayOneShot (audioClip, 0.7F);
-				flg1 = 1;
-			}
+			Suond();
 		} else {
 			print ("でてないです");
 			cube = 0;
@@ -117,7 +114,13 @@ public class Main : MonoBehaviour {
 			GUI.Label(new Rect(90, 40, 80, 20), "し　 ね", m_guiStyle);
 		}
 	}
-
+	
+	void Suond(){
+		if (flg1 == 0) {
+		audioSource.PlayOneShot (audioClip, 0.7F);
+		flg1 = 1;
+		}
+	}
 
 	//public void OnBecameVisible(){
 	//	print (Cube1);
