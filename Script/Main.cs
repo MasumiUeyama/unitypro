@@ -135,8 +135,18 @@ public class Main : MonoBehaviour {
 			flg09 = 1;
 		} else if(Obj19.obj19 == 1 && Obj20.obj20 == 1) {
 			flg10 = 1;
+		} else {
+			flg01=0;
+			flg02=0;
+			flg03=0;
+			flg04=0;
+			flg05=0;
+			flg06=0;
+			flg07=0;
+			flg08=0;
+			flg09=0;
+			flg10=0;
 		}
-		
 		
 		if(flg01==1){
 			kaiten01.transform.Rotate(2,3,2);
@@ -187,16 +197,6 @@ public class Main : MonoBehaviour {
 			Sound();
 		} else {
 			SoundFlg = 0;
-			flg01=0;
-			flg02=0;
-			flg03=0;
-			flg04=0;
-			flg05=0;
-			flg06=0;
-			flg07=0;
-			flg08=0;
-			flg09=0;
-			flg10=0;
 		}
 		
 	}
