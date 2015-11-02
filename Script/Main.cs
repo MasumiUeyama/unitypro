@@ -234,9 +234,9 @@ public class Main : MonoBehaviour {
 		if(flg01 ==1 || flg02 == 1 || flg03 == 1 ||
 		   flg04 ==1 || flg05 == 1 || flg06 == 1 ||
 		   flg07 ==1 || flg08 == 1 || flg09 == 1 || flg10 ==1){
-			GUI.Label (new Rect (90, 40, 80, 20), "正　 解", m_guiStyle);
+			GUI.Label (new Rect (90, 40, 80, 20), "あたり", m_guiStyle);
 		} else {
-			GUI.Label(new Rect(90, 40, 80, 20), "し　 ね", m_guiStyle);
+			GUI.Label(new Rect(90, 40, 80, 20), "はずれ", m_guiStyle);
 		}
 	}
 	
