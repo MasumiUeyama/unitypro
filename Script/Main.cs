@@ -68,12 +68,20 @@ public class Main : MonoBehaviour {
 	
 	public static int SoundFlg1=0;
 	public static int SoundFlg2=0;
+<<<<<<< HEAD
 	public static int flghazure=0;
 
 	public AudioClip audioClip;
 	AudioSource audioSource;
 	public AudioClip audioClip2;
 	AudioSource audioSource2;
+=======
+
+	public AudioClip audioClip;
+	AudioSource audioSource;
+	public AudioClip2 audioClip2;
+	AudioSource2 audioSource2;
+>>>>>>> origin/Cube
 	
 	public static int num;
 	
@@ -107,11 +115,19 @@ public class Main : MonoBehaviour {
 		m_styleState = new GUIStyleState();
 		m_styleState.textColor = Color.red;   // 文字色の変更.
 		m_guiStyle.normal = m_styleState;
+<<<<<<< HEAD
 		
 		audioSource = gameObject.GetComponent<AudioSource>();
 		audioSource.clip = audioClip;
 		audioSource2 = gameObject.GetComponent<AudioSource>();
 		audioSource.clip = audioClip2;
+=======
+
+		audioSource = gameObject.GetComponent<AudioSource>();
+		audioSource.clip = audioClip;
+		audioSource2 = gameObject.GetComponent<AudioSource2>();
+		audioSource.clip2 = audioClip2;
+>>>>>>> origin/Cube
 	}
 	void Update() {
 		//Destroy(Cube1, 2.0f);
@@ -129,6 +145,7 @@ public class Main : MonoBehaviour {
 		
 		num = Obj01.obj01 + Obj02.obj02
 			+ Obj03.obj03 + Obj04.obj04
+<<<<<<< HEAD
 				+ Obj05.obj05 + Obj06.obj06
 				+ Obj07.obj07 + Obj08.obj08
 				+ Obj09.obj09 + Obj10.obj10
@@ -142,6 +159,19 @@ public class Main : MonoBehaviour {
 			SoundFlg2 = 0;
 			flghazure = 0;
 		}
+=======
+			+ Obj05.obj05 + Obj06.obj06
+			+ Obj07.obj07 + Obj08.obj08
+			+ Obj09.obj09 + Obj10.obj10
+			+ Obj11.obj11 + Obj12.obj12
+			+ Obj13.obj13 + Obj14.obj14
+			+ Obj15.obj15 + Obj16.obj16
+			+ Obj17.obj17 + Obj18.obj18
+			+ Obj19.obj19 + Obj20.obj20;
+			
+		if(num != 2) SoundFlg2 = 0;
+		
+>>>>>>> origin/Cube
 		if (Obj01.obj01 == 1 && Obj02.obj02 == 1) {
 			flg01 = 1;
 		} else if(Obj03.obj03 == 1 && Obj04.obj04 == 1) {
@@ -249,11 +279,18 @@ public class Main : MonoBehaviour {
 			SoundFlg1 = 1;
 		}
 	}
+<<<<<<< HEAD
 	
 	void Sound2(){
 		if (SoundFlg2 == 0) {
 			audioSource.PlayOneShot (audioClip2, 0.7F);
 			flghazure = 1;
+=======
+
+	void Sound2(){
+		if (SoundFlg2 == 0) {
+			audioSource.PlayOneShot (audioClip2, 0.7F);
+>>>>>>> origin/Cube
 			SoundFlg2 = 1;
 		}
 	}
