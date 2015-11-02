@@ -65,9 +65,16 @@ public class Main : MonoBehaviour {
 	public static int flg18=0;
 	public static int flg19=0;
 	public static int flg20=0;
-	public static int SoundFlg=0;
+	
+	public static int SoundFlg1=0;
+	public static int SoundFlg2=0;
+
 	public AudioClip audioClip;
 	AudioSource audioSource;
+	public AudioClip2 audioClip2;
+	AudioSource2 audioSource2;
+	
+	public static int num;
 	
 	void Start() {
 		//Ssend = GetComponent<Script1>();
@@ -99,8 +106,11 @@ public class Main : MonoBehaviour {
 		m_styleState = new GUIStyleState();
 		m_styleState.textColor = Color.red;   // 文字色の変更.
 		m_guiStyle.normal = m_styleState;
+
 		audioSource = gameObject.GetComponent<AudioSource>();
 		audioSource.clip = audioClip;
+		audioSource2 = gameObject.GetComponent<AudioSource2>();
+		audioSource.clip2 = audioClip2;
 	}
 	void Update() {
 		//Destroy(Cube1, 2.0f);
@@ -114,6 +124,20 @@ public class Main : MonoBehaviour {
 		//print(Cube1.cube1);
 		//print(Cube2.cube2);
 		
+		
+		
+		num = Obj01.obj01 + Obj02.obj02
+			+ Obj03.obj03 + Obj04.obj04
+			+ Obj05.obj05 + Obj06.obj06
+			+ Obj07.obj07 + Obj08.obj08
+			+ Obj09.obj09 + Obj10.obj10
+			+ Obj11.obj11 + Obj12.obj12
+			+ Obj13.obj13 + Obj14.obj14
+			+ Obj15.obj15 + Obj16.obj16
+			+ Obj17.obj17 + Obj18.obj18
+			+ Obj19.obj19 + Obj20.obj20;
+			
+		if(num != 2) SoundFlg2 = 0;
 		
 		if (Obj01.obj01 == 1 && Obj02.obj02 == 1) {
 			flg01 = 1;
@@ -136,6 +160,7 @@ public class Main : MonoBehaviour {
 		} else if(Obj19.obj19 == 1 && Obj20.obj20 == 1) {
 			flg10 = 1;
 		} else {
+			if(num == 2) Sound2();
 			flg01=0;
 			flg02=0;
 			flg03=0;
@@ -151,52 +176,55 @@ public class Main : MonoBehaviour {
 		if(flg01==1){
 			kaiten01.transform.Rotate(2,3,2);
 			kaiten02.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg02==1){
 			kaiten03.transform.Rotate(2,3,2);
 			kaiten04.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg03==1){
 			kaiten05.transform.Rotate(2,3,2);
 			kaiten06.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg04==1){
 			kaiten07.transform.Rotate(2,3,2);
 			kaiten08.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg05==1){
 			kaiten09.transform.Rotate(2,3,2);
 			kaiten10.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg06==1){
 			kaiten11.transform.Rotate(2,3,2);
 			kaiten12.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg07==1){
 			kaiten13.transform.Rotate(2,3,2);
 			kaiten14.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
 			
 		} else if(flg08==1){
 			kaiten15.transform.Rotate(2,3,2);
 			kaiten16.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
+			
 		} else if(flg09==1){
 			kaiten17.transform.Rotate(2,3,2);
 			kaiten18.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
+			
 		} else if(flg10==1){
 			kaiten19.transform.Rotate(2,3,2);
 			kaiten20.transform.Rotate(2,3,2);
-			Sound();
+			Sound1();
+			
 		} else {
-			SoundFlg = 0;
+			SoundFlg1 = 0;
 		}
 		
 	}
@@ -212,10 +240,17 @@ public class Main : MonoBehaviour {
 		}
 	}
 	
-	void Sound(){
-		if (SoundFlg == 0) {
+	void Sound1(){
+		if (SoundFlg1 == 0) {
 			audioSource.PlayOneShot (audioClip, 0.7F);
-			SoundFlg = 1;
+			SoundFlg1 = 1;
+		}
+	}
+
+	void Sound2(){
+		if (SoundFlg2 == 0) {
+			audioSource.PlayOneShot (audioClip2, 0.7F);
+			SoundFlg2 = 1;
 		}
 	}
 	//public void OnBecameVisible(){
