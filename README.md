@@ -4,15 +4,13 @@
   * PC1台(windows 10/64bit/メモリ 8.00GBにて動作確認済み)
   * Webカメラ(HD webcam C615)
   * Unity(ゲームエンジン)
-  * Vuforia(UnityでARを使用するためのライブラリ)
-  * ARマーカー(段ボールに正方形の古代文字が書かれた紙が貼り付けられている)20枚
+  * ARマーカー20枚
 
 * 作業手順
   * 1.Unityのダウンロードとアカウント登録
-  * 2.
-  * 3.
-  * 4.
-  * 5.
+  * 2.ゲームのプロジェクトのダウンロード
+  * 3.ARマーカーのダウンロード
+  * 4.ゲームの起動
 
 
 * 1.Unityのダウンロードとアカウント登録
@@ -39,6 +37,17 @@
       先ほど登録したメールアドレスとパスワードを入力しログインする
     * 「License management」と表示されるので「Unity PERSONAL EDITION」にチェックを入れ「Next」を選択する
     * 「License agreement」と表示されるので「I agree」を選択する
-    * 「Quick and easy survey;)」と表示されるので各質問に答え、
-  * 4.
-  * 5.
+    * 「Quick and easy survey;)」と表示されるので各質問に答え、「OK」を選択
+    * 「Thank you!:)」と表示されるので「Start Using Unity」を選択し、右上の「×」を選択し、画面を閉じる
+  * 2.ゲームのprojectのダウンロード
+    * igakilab/unitypro内にある「New Unity Project」をダウンロードし任意の場所に保存する
+    * 「Nwe Unity Project」を開き、Nwe Unity Project/Assets内の「unity.unity」を実行する
+    * 画面に「」が表示されたのを確認したら、右上の「×」を選択しUnityを終了する
+  * 3.ARマーカーのダウンロード
+    * igakilab/unitypro内にある「ARマーカー」をダウンロードし任意の場所に保存する
+    * 「ARマーカー」を開き、中にある20枚の画像と対応表を印刷する
+  * 4.ゲームの起動
+    * Webカメラ(HD webcam C615)をパソコンに接続する
+    * デスクトップ上の「Unity5.1.2f1(32-bit)」と書かれたアイコンを選択し、Unityを起動する
+    * 画面中央上部にある「▶(再生)」を選択する
+    * 印刷したARマーカーをカメラの映像の範囲に入れ、2枚同時に映し出し、同じ柄のマーカーかどうかを判断する
