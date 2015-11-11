@@ -31,5 +31,14 @@
     * デスクトップ上に「Unity5.1.2f1(32-bit)」と書かれたアイコンが出現するので、起動する
     * 「Welcome to Unity」と表示されアカウントの確認をされるので「Sign into your Unity Account」の下にある
       「create one」を選択する
+    * ブラウザが起動し、アカウント作成画面が表示されるので各項目を入力し、「I agree to the Unity ...」チェックを入れ
+      「Create account」を選択する
+      指定したメールアドレスに「Unity Accounts」からメールが来るので、
+      「Confirm email」を選択し、登録したメールアドレスとパスワードを入力する
+    * デスクトップの「Unity5.1.2f1(32-bit)」と書かれたアイコンからUnityを起動し、
+      先ほど登録したメールアドレスとパスワードを入力しログインする
+    * 「License management」と表示されるので「Unity PERSONAL EDITION」にチェックを入れ「Next」を選択する
+    * 「License agreement」と表示されるので「I agree」を選択する
+    * 「Quick and easy survey;)」と表示されるので各質問に答え、
   * 4.
   * 5.
