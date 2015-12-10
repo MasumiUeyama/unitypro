@@ -40,7 +40,7 @@
     * 「Quick and easy survey;)」と表示されるので各質問に答え、「OK」を選択
     * 「Thank you!:)」と表示されるので「Start Using Unity」を選択し、右上の「×」を選択し、画面を閉じる
   * 2.ゲームのprojectのダウンロード
-    * なすびちゃん内にある「New Unity Project」をダウンロードし任意の場所に保存する
+    * なすびちゃん内(\\150.89.234.253\teams\mst57)にある「New Unity Project」をダウンロードし任意の場所に保存する
     * 「Nwe Unity Project」を開き、New Unity Project/Assets内の「unity.unity」を実行する
     * 画面にunityのEdit(全体的にグレーな)画面が全画面表示で表示されるので表示を確認したら、
       右上の「×」を選択しUnityを終了する
